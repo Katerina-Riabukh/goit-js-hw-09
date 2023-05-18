@@ -10,6 +10,7 @@ const btnStop = buttons[1]
 let colorPicker;
 
 
+
 btnStart.addEventListener('click', onStartChangeColor)
 btnStop.addEventListener('click', onStopChangeColor)
 
@@ -20,10 +21,11 @@ function onStartChangeColor(event) {
     colorPicker = setInterval(() => {
     body.style.backgroundColor = getRandomHexColor();
   }, 1000);
-    
+    console.log(colorPicker);
 }
+
 
 function onStopChangeColor(event) {
     btnStart.disabled = false;
-    clearInterval(colorPicker)
+    clearTimeout(colorPicker)
 }
