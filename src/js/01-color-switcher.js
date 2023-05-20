@@ -21,7 +21,7 @@ function onStartChangeColor(event) {
     colorPicker = setInterval(() => {
     body.style.backgroundColor = getRandomHexColor();
   }, 1000);
-    console.log(colorPicker);
+ 
 }
 
 
