@@ -1,6 +1,8 @@
 input {
-    width: 282px;
-    font-size: 26px;
+    width: 260px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
 }
 
 button {
@@ -8,8 +10,9 @@ button {
 }
 
 .timer {
+    gap: 36px;
     display: flex;
-    gap: 25px;
+    padding: 5px;
 }
 
 .field {
@@ -20,7 +23,7 @@ button {
 .value {
     font-size: 50px;
     text-align: center;
-    /* text-shadow: 4px -3px 4px #000; */
+    text-shadow: 6px -2px 3px #0f8ae999;
 }
 
 .label {

@@ -23,7 +23,6 @@ const options = {
 
     if (convertedtime < date) {
       Notiflix.Notify.warning("Please choose a date in the future");
-      //window.alert("Please choose a date in the future")
       return
     } else {
        button.disabled = false
@@ -56,6 +55,7 @@ function convertMs(ms) {
 
 const timer = {
   start() { 
+    button.disabled = true
     const startingPoint = new Date(input.value).getTime()
     Notiflix.Notify.success('Let`s start!');
     const timerId = setInterval(() => {
@@ -68,12 +68,8 @@ const timer = {
       elementsTimer[2].textContent = convertTime.minutes
       elementsTimer[3].textContent = convertTime.seconds
 
-      
-      //console.log(`${convertTime.days}::${convertTime.hours}::${convertTime.minutes}::${convertTime.seconds}`);
-
       if ( convertTime.days === '00' && convertTime.hours === '00' &&  convertTime.minutes === '00' &&  convertTime.seconds === '00') {
         clearInterval(timerId)
-        console.log('timer stop');
       }
     }, 1000);
   },
